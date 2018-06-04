@@ -50,14 +50,14 @@ namespace CopyAssetsProject.Droid
 		/// <param name="e">E.</param>
 		private void CopyAssetsButton_Click(object sender, System.EventArgs e)
         {
-            DeployDatabaseFromAssets().FireAndForgetSafeAsync();
+            DeployDatabaseFromAssetsAsync().FireAndForgetSafeAsync();
             _pathTextView.Text = "The database path : \n" + GetDefaultFolderPath();
         }
 
         /// <summary>
         /// Deploy the database from the assets folder to the application app.
         /// </summary>
-        public async Task DeployDatabaseFromAssets()
+        public async Task DeployDatabaseFromAssetsAsync()
         {
             // Android application default folder.
             var dbFile = GetDefaultFolderPath();
